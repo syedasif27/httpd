@@ -1,0 +1,9 @@
+---
+- name: Deleting apache web server
+  hosts: all
+  become: yes
+  tasks:
+    - name: Deleting
+      yum:
+        name: httpd
+        state: absent

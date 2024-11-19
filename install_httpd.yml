@@ -1,0 +1,9 @@
+---
+- name: Installing httpd in every server
+  hosts: all
+  become: yes
+  tasks:
+    - name: Installing httpd
+      dnf:
+        name: httpd
+        state: latest

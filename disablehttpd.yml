@@ -1,0 +1,10 @@
+---
+- name: Disbaling httpd service
+  hosts: all
+  become: yes
+  tasks:
+    - name: Disbaling httpd service
+      service:
+        name: httpd
+        state: stopped
+        enabled: no
